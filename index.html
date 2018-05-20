@@ -11,7 +11,7 @@
   <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato'>
-/*<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>*/
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.css'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css'>
@@ -101,7 +101,6 @@
       </div>
     </div>
     <div class="col">
-
       <div class="row text-center">
         <div class="col">
           <div class="thumbnail fancybox"   >
@@ -118,7 +117,6 @@
         </div>
       </div>
       <div class="row text-center">
-
         <div class="col">
           <div class="thumbnail fancybox"><a href="https://i1.wp.com/lianechan.com/portfolio/wp-content/uploads/2013/12/SeaBreeze1.jpg" alt="Sea Breeze Landscaping"   data-caption="Sea Breeze Landscaping" data-fancybox="gallery" data-trigger="gallery" href="javascript:;">
             <img  src="https://i1.wp.com/lianechan.com/portfolio/wp-content/uploads/2013/12/SeaBreeze1.jpg" alt="Sea Breeze Landscaping" rel="gallery"></a>
@@ -178,33 +176,23 @@
       <div class="col text-center">
           <ul id="menu-socials" class="nav top-bar-nav  ">
             <li><a title="Facebook" href="https://www.facebook.com/porcupiny" target="_blank"><i class="fab fa-facebook"></i>
-
 </a></li>
             <li><a title="Twitter" href="https://twitter.com/porcupiny" target="_blank"><i class="fab fa-twitter"></i>
-
 </a></li>
             <li><a title="Google" href="https://plus.google.com/+LianeChan/" target="_blank"><i class="fab fa-google"></i>
-
 </a></li>
             <li><a title="Linkedin" href="https://www.linkedin.com/in/lianechan" target="_blank"><i class="fab fa-linkedin-in"></i>
-
 </a></li>
             <li><a title="Instagram" href="https://www.instagram.com/porcupiny/" target="_blank"><i class="fab fa-instagram"></i>
-
 </a></li>
             <li><a title="Pinterest" href="https://www.pinterest.com/porcupiny/" target="_blank"><i class="fab fa-pinterest"></i>
-
 </a></li>
             <li><a title="Youtube" href="https://www.youtube.com/user/lianeirene" target="_blank"><i class="fab fa-youtube"></i>
-
 </a></li>
           </ul>
       </div>
-
       <div>
-
   </footer>
-
   <div class="container-fluid bg-grey text-center" id="copyright">
     Liane Chan © 2018.
   </div>
@@ -232,33 +220,31 @@
         });
     });
   $.noConflict();</script>
-   <script>$(document).ready(function() {
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on("click", function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $("html, body").animate(
-        {
-          scrollTop: $(hash).offset().top
-        },
-        900,
-        function() {
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        }
-      );
-    } // End if
-  });
-});
-                    </script>
+                                                   
+                                                    <script>
+    $(document).ready(function() {
+      // Initialize Tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+  </script>
+<script>$(function($){
+        var addToAll = true;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+  $.noConflict();</script>
   
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
