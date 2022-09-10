@@ -221,33 +221,8 @@
     Liane Chan © 2022.
   </div>
    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script>
-  <script>
-    $(document).ready(function() {
-      // Initialize Tooltip
-      $('[data-toggle="tooltip"]').tooltip();
-    })
-  </script>
-<script>$(function($){
-        var addToAll = true;
-        var gallery = true;
-        var titlePosition = 'inside';
-        $(addToAll ? 'img' : 'img.fancybox').each(function(){
-            var $this = $(this);
-            var title = $this.attr('title');
-            var src = $this.attr('data-big') || $this.attr('src');
-            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-            $this.wrap(a);
-        });
-        if (gallery)
-            $('a.fancybox').attr('rel', 'fancyboxgallery');
-        $('a.fancybox').fancybox({
-            titlePosition: titlePosition
-        });
-    });
-  $.noConflict();</script>
- <script>
-                                                   $(document).ready(function() {
+                                                                                     <script>
+  $(document).ready(function() {
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on("click", function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -274,5 +249,31 @@
   });
 });
                     </script>
+    <script>
+  <script>
+    $(document).ready(function() {
+      // Initialize Tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+  </script>
+<script>$(function($){
+        var addToAll = true;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+  $.noConflict();</script>
+
 
 
